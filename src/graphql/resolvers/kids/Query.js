@@ -1,6 +1,8 @@
+import { Kid } from '../../../db/schemas/kid.js';
+
 export const kidQuery = {
-  kids: (parent, args, ctx, info) => {
-    console.log("hey");
-    return;
-  },
+   kid: async (parent, args, ctx, info) => {
+      console.log('hey');
+      return;
+   },
 };
