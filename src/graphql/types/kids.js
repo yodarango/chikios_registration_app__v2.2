@@ -2,11 +2,13 @@ import { gql } from 'apollo-server-express';
 
 export const kidsTypeDef = gql`
    type Query {
-      kid(ID: ID, first_name: String, last_name: String, age: Int): [Kid]
+      kid(ID: ID, first_name: String, last_name: String, skip: Int): [Kid]
    }
 
    type Mutation {
       kid(data: KidInput): Kid
+      check_in(ID: ID): Kid
+      check_out(ID: ID, checked_out_by: String): Kid
    }
 
    # ---------------- types
